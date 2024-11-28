@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/ysl
+LOCAL_PATH := device/xiaomi/snow
 
 # Build
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -22,8 +22,11 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+# OTA
+TARGET_OTA_ASSERT_DEVICE := vince,ysl,blossom
+
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := ysl
+TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 TARGET_NO_BOOTLOADER := true
 
 # VINTF
@@ -45,7 +48,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_VERSION := 4.9
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_PREBUILT_KERNEL := device/xiaomi/ysl/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/snow/prebuilt/Image.gz-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
@@ -73,7 +76,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP Configuration
-TW_DEVICE_VERSION := Redmi S2 | RenzAlt
+TW_DEVICE_VERSION := Xiaomi_Snow | RenzAlt
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
